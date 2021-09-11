@@ -19,10 +19,10 @@ jobs:
         with:
           these: |
             terraform 1.0.6 https://github.com/asdf-community/asdf-hashicorp.git
-            golang 1.16.8 https://github.com/kennyp/asdf-golang.git
+            goreleaser 0.177.0 https://github.com/kforsthoevel/asdf-goreleaser.git
 
       - name: test installations
         run: |
           . .asdf/asdf.sh
           terraform --version
-          go version
+          goreleaser --version
