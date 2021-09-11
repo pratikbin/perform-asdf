@@ -15,7 +15,7 @@ jobs:
           path: .asdf
           ref: 'v0.8.1'
       - name: install plugin
-        uses: pratikbalar/perform-asdf@main
+        uses: ./
         with:
           these: |
             terraform 1.0.6 https://github.com/asdf-community/asdf-hashicorp.git
