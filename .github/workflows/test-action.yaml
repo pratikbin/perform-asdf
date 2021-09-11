@@ -24,7 +24,6 @@ jobs:
       - name: test installations
         run: |
           . .asdf/asdf.sh
-          find ../../ -name set-java-home.bash -type f
-          . .asdf/plugins/java/set-java-home.bash
+          . ../../_temp/_github_home/.asdf/plugins/java/set-java-home.bash
           terraform --version
           java -version
