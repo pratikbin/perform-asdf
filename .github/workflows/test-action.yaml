@@ -19,10 +19,11 @@ jobs:
         with:
           these: |
             terraform 1.0.6 https://github.com/asdf-community/asdf-hashicorp.git
-            goreleaser 0.177.0 https://github.com/kforsthoevel/asdf-goreleaser.git
+            java zulu-8.56.0.21 https://github.com/halcyon/asdf-java.git
 
       - name: test installations
         run: |
           . .asdf/asdf.sh
+          . ~/.asdf/plugins/java/set-java-home.bash
           terraform --version
-          goreleaser --version
+          java -version
