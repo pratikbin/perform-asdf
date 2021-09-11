@@ -4,9 +4,8 @@ description: "User asdf as package manager to install everything"
 inputs:
   name:
     description: "Name of the asdf plugin"
-    required: true
+    required: false
+
 runs:
   using: "docker"
   image: "Dockerfile"
-  args:
-    - ${{ inputs.pokemon_id }}
