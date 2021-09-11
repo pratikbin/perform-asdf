@@ -3,10 +3,10 @@ set -e
 
 [[ $DEBUG ]] && set -x
 
-api_url="https://pokeapi.co/api/v2/pokemon/${INPUT_POKEMON_ID}"
-echo $api_url
+. .asdf/asdf.sh
 
-pokemon_name=$(curl "${api_url}" | jq ".name")
-echo $pokemon_name
+asdf plugin-add ${INPUT_NAME} ${INPUT_URL}
+asdf install ${INPUT_NAME} ${INPUT_VERSION}
+asdf global ${INPUT_NAME} ${INPUT_VERSION}
 
-echo "::set-output name=pokemon_name::$pokemon_name"
+asdf info

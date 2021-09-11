@@ -2,15 +2,11 @@
 name: "Perform asdf"
 description: "User asdf as package manager to install everything"
 inputs:
-  pokemon_id:
-    description: "number of the pokemon in the pokedex"
+  name:
+    description: "Name of the asdf plugin"
     required: true
-    default: "1"
-outputs:
-  pokemon_name:
-    description: "Name des Pokemons"
 runs:
   using: "docker"
   image: "Dockerfile"
   args:
-    - ${{ inputs.pokemon_id}}
+    - ${{ inputs.pokemon_id }}

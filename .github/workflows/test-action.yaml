@@ -8,10 +8,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Get Pokemon name
-        uses: ./ # Uses an action in the root directory
-        id: pokemon
+      - name: Checkout tools repo
+        uses: actions/checkout@v2
         with:
-          pokemon_id: 150
-      - name: Get the pokemon
-        run: echo "${{ steps.pokemon.outputs.pokemon_name }} attack"
+          repository: asdf-vm/asdf
+          path: .asdf
+          ref: 'v0.8.1'
+      - name: install plugin
+        uses: ./ # Uses an action in the root directory
+        with:
+          name: terraform
+          url: https://github.com/asdf-community/asdf-hashicorp.git
+          version: 1.0.6
+      - name: test
+        run: terraform --version
