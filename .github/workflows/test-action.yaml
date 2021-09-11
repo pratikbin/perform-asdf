@@ -25,10 +25,8 @@ jobs:
           these: |
             terraform 1.0.6 https://github.com/asdf-community/asdf-hashicorp.git
             java openjdk-10 https://github.com/halcyon/asdf-java.git
-            php 7.4.1 https://github.com/asdf-community/asdf-php.git
 
       - name: test installations
         run: |
           terraform --version
           java -version
-          php --version
