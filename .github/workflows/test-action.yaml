@@ -19,10 +19,10 @@ jobs:
         with:
           these: |
             terraform 1.0.6 https://github.com/asdf-community/asdf-hashicorp.git
-            java zulu-8.56.0.21 https://github.com/halcyon/asdf-java.git
+            redis-cli 6.2.5 https://github.com/NeoHsu/asdf-redis-cli.git
 
       - name: test installations
         run: |
           . .asdf/asdf.sh
           terraform --version
-          java -version
+          redis-cli --version
