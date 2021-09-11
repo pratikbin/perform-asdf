@@ -1,12 +1,19 @@
 # perform-asdf
 
-asdf-as-a-pkg-manager maybe
+asdf-as-a-package-manager maybe
 
 ### Note: add `.asdf` in `.gitignore`
 
-as we checkout .asdf in repo since gh actions does not let us checkout outside of `'/home/runner/work/<org>/<repo>/`
+as we checkout `.asdf` repo and since gh actions does not let us checkout outside of `/home/runner/work/<org>/<repo>/` so
+we have to checked it out at `/home/runner/work/<org>/<repo>/`
 
 ## Usage
+
+**main** branch will always be stable
+
+- list new line seprated plugins in `with.thses` with below pattern
+  `<plugin-name> <plugin-version> <plugin-url>`
+
 
 ```yaml
       ## checkout asdf
@@ -19,14 +26,15 @@ as we checkout .asdf in repo since gh actions does not let us checkout outside o
 
       ## enable plugin
       - name: Install plugins
-        uses: pratikbalar/perform-asdf
+        uses: pratikbalar/perform-asdf@main
         with:
           these: |
             terraform 1.0.6 https://github.com/asdf-community/asdf-hashicorp.git
-            java openjdk-10 https://github.com/halcyon/asdf-java.git
+            java zulu-8.56.0.21 https://github.com/halcyon/asdf-java.git
 
       - name: Test installations
         run: |
+          .asdf
           terraform --version
           java -version
 ```

@@ -19,9 +19,10 @@ jobs:
         with:
           these: |
             terraform 1.0.6 https://github.com/asdf-community/asdf-hashicorp.git
-            java openjdk-10 https://github.com/halcyon/asdf-java.git
+            java zulu-8.56.0.21 https://github.com/halcyon/asdf-java.git
 
       - name: test installations
         run: |
+          .asdf
           terraform --version
           java -version
