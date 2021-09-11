@@ -12,3 +12,7 @@ asdf global ${INPUT_NAME} ${INPUT_VERSION}
 asdf info
 
 echo ${INPUT_THESE}
+IFS=$'\n'
+for plugin in ${INPUT_THESE}; do
+  echo ${plugin}
+done

@@ -5,7 +5,15 @@ inputs:
   name:
     description: "Name of the asdf plugin"
     required: false
-
+  url:
+    description: "url of the asdf plugin"
+    required: false
+  version:
+    description: "version of the asdf plugin"
+    required: false
+  these:
+    description: "mulltiple plugins support (line seprated)"
+    required: false
 runs:
   using: "docker"
   image: "Dockerfile"
