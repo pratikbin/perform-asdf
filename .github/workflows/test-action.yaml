@@ -15,13 +15,8 @@ jobs:
           path: .asdf
           ref: 'v0.8.1'
       - name: install plugin
-        uses: ./ # Uses an action in the root directory
-        env:
-          DEBUG: true
+        uses: pratikbalar/perform-asdf
         with:
-          name: terraform
-          url: https://github.com/asdf-community/asdf-hashicorp.git
-          version: 1.0.6
           these: |
             terraform 1.0.6 https://github.com/asdf-community/asdf-hashicorp.git
             java openjdk-10 https://github.com/halcyon/asdf-java.git
