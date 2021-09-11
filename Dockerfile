@@ -1,12 +1,10 @@
 # Base image
-FROM alpine:latest
+FROM alpine:3.14
 
 # installes required packages for our script
 RUN	apk add --no-cache \
   bash \
   ca-certificates \
-  curl \
-  jq \
   git
 
 # Copies your code file  repository to the filesystem

@@ -10,3 +10,5 @@ asdf install ${INPUT_NAME} ${INPUT_VERSION}
 asdf global ${INPUT_NAME} ${INPUT_VERSION}
 
 asdf info
+
+echo ${INPUT_THESE}

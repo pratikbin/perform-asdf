@@ -20,5 +20,8 @@ jobs:
           name: terraform
           url: https://github.com/asdf-community/asdf-hashicorp.git
           version: 1.0.6
+          these: |
+            terraform 1.0.6 https://github.com/asdf-community/asdf-hashicorp.git
+            maven 3.5.0 https://github.com/skotchpine/asdf-maven
       - name: test
         run: terraform --version
