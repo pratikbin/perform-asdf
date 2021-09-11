@@ -23,6 +23,6 @@ jobs:
 
       - name: test installations
         run: |
-          .asdf
+          . .asdf/asdf.sh
           terraform --version
           java -version

@@ -34,7 +34,7 @@ we have to checked it out at `/home/runner/work/<org>/<repo>/`
 
       - name: Test installations
         run: |
-          .asdf
+          . .asdf/asdf.sh
           terraform --version
           java -version
 ```
