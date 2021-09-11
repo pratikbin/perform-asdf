@@ -42,5 +42,5 @@ we have to checked it out at `/home/runner/work/<org>/<repo>/`
 - Read plugin docs for more configurations like java plugin required shell initilization read more
 <https://github.com/halcyon/asdf-java#java_home>
 
-- must add `. .asdf/asdf.sh` in run to use asdf installed plugins unless you want to use default versions
+- must add `. .asdf/asdf.sh` in `run` step to use asdf installed plugins unless you want to use default versions
 that come with runner
