@@ -16,6 +16,8 @@ jobs:
           ref: 'v0.8.1'
       - name: install plugin
         uses: ./ # Uses an action in the root directory
+        env:
+          DEBUG: true
         with:
           name: terraform
           url: https://github.com/asdf-community/asdf-hashicorp.git
