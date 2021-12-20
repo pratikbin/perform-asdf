@@ -1,11 +1,9 @@
 #!/bin/bash
 set -e
 
-balckhole='&> /dev/null'
-if [[ $DEBUG ]]; then
-  set -x
-  unset balckhole
-fi
+printenv
+
+[[ $DEBUG ]] && set -x
 
 . .asdf/asdf.sh
 
